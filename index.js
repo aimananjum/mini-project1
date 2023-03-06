@@ -54,3 +54,22 @@ function randomColor(){
     }
     return colorCode;
 }
+
+const btnEl  = document.querySelector(".btn")
+const closeIconEl = document.querySelector(".close-icon")
+
+const videoEl = document.querySelector("video");
+
+const trailerContainerEl = document.querySelector(".trailer-container");
+
+btnEl.addEventListener("click",()=>{
+    trailerContainerEl.classList.remove("activeV");
+    
+});
+
+closeIconEl.addEventListener("click",()=>{
+    trailerContainerEl.classList.add("activeV");
+    videoEl.pause();
+    videoEl.currentTime =0;
+});
+
